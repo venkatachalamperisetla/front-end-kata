@@ -1,0 +1,21 @@
+<!-- TODO -- src/app/assemblyline/assemblyline.component.html -->
+<div class="col-12 pt-2 mb-2">
+    <label>Add an item:</label>
+    <input type="text" data-test="assembly-add-item" [(ngModel)]="assemblyObject.addItem" name="addItem"
+        #addItem="ngModel" (onKeyPress.enter)="assemblyAddItem()" (change)="assemblyAddItem()" />
+</div>
+
+<div class="col-12">
+    <div class="row">
+        <ng-container *ngFor="let stage of assemblyObject.stageObject;let index = index">
+            <div class="col-3">
+                <label>{{stage.label}}</label>
+                <div class="w-100 h-100 stage-item">
+                    <ng-container *ngIf="stage.content">
+                        <button class="btn-idea" *ngFor="let item of stage.content" (click)="stageItem('left', item, index)" (contextmenu)="stageItem('right', item, index, $event)">{{item}}</button>
+                    </ng-container>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

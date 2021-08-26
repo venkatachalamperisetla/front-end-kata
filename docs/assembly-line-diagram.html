@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>assembly line diagram</title>
+  <style>
+    div.container {
+      display: flex;
+      align-items: center;
+    }
+    div.box {
+      margin: 0.5em;
+      padding: 0.8em;
+      width: 80px;
+      box-shadow: 1px 1px #888;
+      height: 40px;
+      border: 1px solid #444;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: monospace;
+      border-radius: 2px;
+      font-size: 13px;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+    div.box p {
+      text-align: center;
+    }
+    div.arrow {
+      text-align: center;
+      font-size: 28px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="box">
+    <p>
+      Brainstorming stage
+    </p>
+  </div>
+  <div class="arrow">&#8594;</div>
+  <div class="box">
+    <p>
+      Development stage
+    </p>
+  </div>
+  <div class="arrow">&#8594;</div>
+  <div class="box">
+    <p>
+      Testing stage
+    </p>
+  </div>
+  <div class="arrow">&#8594;</div>
+  <div class="box">
+    <p>
+      Deployment stage
+    </p>
+  </div>
+</div>
+</body>
+</html>
